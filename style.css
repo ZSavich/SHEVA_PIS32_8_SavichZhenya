@@ -1,0 +1,100 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 800px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+img {
+    width: 800px;
+    padding: 0px;
+    height: auto;
+
+    transition-duration: 1s;
+}
+
+h1 {
+    font-weight: normal;
+    color: darkslateblue;
+}
+
+fieldset {
+    width: 100%;
+    border: 0px solid black;
+    padding: 0px;
+    margin-bottom: 40px;
+}
+
+legend {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+span {
+    width: 30%;
+    background-color: lightsteelblue;
+    color: white;
+    padding: 10px 20px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+input {
+    width: 70%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 10px 20px;
+    outline: none;
+}
+
+input:not([type='submit']):focus {
+    border-color: cornflowerblue;
+    border-left: none;
+}
+
+.error,
+.error:focus {
+    border-color: red;
+    border-left: none;
+}
+
+.agree {
+    border-color: green;
+    border-left: none;
+}
+
+.btn {
+    border: 2px solid dodgerblue;
+    border-radius: 5px;
+    font-size: 16px;
+    color: dodgerblue;
+    width: 100%;
+    outline: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+    border-color: cornflowerblue;
+    color: cornflowerblue;
+}
+
+.btn:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab Work 7</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Изменение свойств картинки</h1>
+            <img src="./image.jpg" alt="Some image" class="img" id="img">
+        <form class="validate">
+            <fieldset>
+                <legend>Изменение размеров</legend>
+                <label><span>Ширина (width)</span><input class="required" type="number" name="width" id="width"></label>
+                <label><span>Высота (height)</span><input class="required" type="number" name="height" id="height"></label>
+            </fieldset>
+            <fieldset>
+                <legend>Изменение рамок</legend>
+                <label><span>Толщина линий</span><input class="required" type="number" name="borderWeight" id="borderWeight"></label>
+                <label><span>Цвет рамки</span><input class="required" type="text" name="borderColor" id="borderColor"></label>
+            </fieldset>
+            <fieldset>
+                <legend>Дополнительно</legend>
+                <label><span>Альтернативный текст</span><input type="text" name="text" id="text"></label>
+            </fieldset>
+            <input type="submit" class="btn" id="change" value="Применить параметры">
+        </form>
+    </main>
+    <script src="./jquery.min.js"></script>
+    <script src="./jquery.validate.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
