@@ -5,34 +5,65 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lab Work 7</title>
+    <title>Lab Work 5</title>
+    <link rel="stylesheet" href="./bootstrap.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-    <main>
-        <h1>Изменение свойств картинки</h1>
-            <img src="./image.jpg" alt="Some image" class="img" id="img">
-        <form class="validate">
-            <fieldset>
-                <legend>Изменение размеров</legend>
-                <label><span>Ширина (width)</span><input class="required" type="number" name="width" id="width"></label>
-                <label><span>Высота (height)</span><input class="required" type="number" name="height" id="height"></label>
-            </fieldset>
-            <fieldset>
-                <legend>Изменение рамок</legend>
-                <label><span>Толщина линий</span><input class="required" type="number" name="borderWeight" id="borderWeight"></label>
-                <label><span>Цвет рамки</span><input class="required" type="text" name="borderColor" id="borderColor"></label>
-            </fieldset>
-            <fieldset>
-                <legend>Дополнительно</legend>
-                <label><span>Альтернативный текст</span><input type="text" name="text" id="text"></label>
-            </fieldset>
-            <input type="submit" class="btn" id="change" value="Применить параметры">
-        </form>
-    </main>
-    <script src="./jquery.min.js"></script>
-    <script src="./jquery.validate.min.js"></script>
-    <script src="./script.js"></script>
+<main>
+    <section class="data row d-flex flex-column align-items-center">
+        <div class="col-lg-10">
+            <h1 class="text-center mb-3">Диаграма стоимости услуг предприятий</h1>
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Предприятие</th>
+                    <th>Стоимость услуг</th>
+                </tr>
+                </thead>
+                <tbody id="tbody">
+                <tr>
+                    <td><a href="#" class="btn btn-danger btn--remove">Удалить</a></td>
+                    <td onclick="changeParam(this)">Макдональдс</td>
+                    <td onclick="changeParam(this)">100$</td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="btn btn-danger btn--remove">Удалить</a></td>
+                    <td onclick="changeParam(this)">KFC</td>
+                    <td onclick="changeParam(this)">150$</td>
+                </tr>
+                </tbody>
+            </table>
+            <a href="#" class="btn btn-success" id="add">Добавить предприятие</a>
+            <form id="addForm">
+                <div class="form__wrapper">
+                    <div class="input-group mb-3 mt-5">
+                        <div class="input-group-prepend">
+                            <label for="name" class="input-group-text">Название предприятия</label>
+                        </div>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label for="cost" class="input-group-text">Стоимость услуг</label>
+                        </div>
+                        <input type="text" class="form-control" id="cost" required>
+                    </div>
+                    <button type="submit" id="btnSub" class="btn btn-primary">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="diagrams row d-flex align-items-center flex-column">
+        <h2 class="text-center mb-5">Диаграмма</h2>
+        <div class="diagrams__list col-lg-10 d-flex justify-content-around align">
+        </div>
+    </section>
+</main>
+<script src="./jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="./script.js"></script>
 </body>
 </html>

@@ -1,100 +1,104 @@
-body {
-    font-family: sans-serif;
-    text-align: center;
-}
-
-
 form {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    max-width: 800px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    overflow: hidden;
+    height: 0;
 }
 
-img {
-    width: 800px;
-    padding: 0px;
+.show {
     height: auto;
+}
 
+.form__wrapper {
+    transform: translateY(-200px);
     transition-duration: 1s;
 }
 
-h1 {
-    font-weight: normal;
-    color: darkslateblue;
+.show .form__wrapper {
+    transform: translateY(0px);
 }
 
-fieldset {
-    width: 100%;
-    border: 0px solid black;
-    padding: 0px;
-    margin-bottom: 40px;
+.table td {
+    vertical-align: middle;
 }
 
-legend {
-    font-size: 24px;
-    margin-bottom: 20px;
+.data {
+    margin-bottom: 50px;
 }
 
-label {
+.diagrams {
+    transition-duration: 1s;
+}
+
+.diagram {
     display: flex;
-    flex-direction: row;
-    margin-bottom: 5px;
+    align-items: flex-end;
+    height: 300px;
+    flex-grow: 1;
+    position: relative;
 }
 
-span {
-    width: 30%;
-    background-color: lightsteelblue;
-    color: white;
-    padding: 10px 20px;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
-    border: 1px solid rgba(0,0,0,0.1);
+.diagram:not(:last-child) {
+    margin-right: 10px;
 }
 
-input {
-    width: 70%;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border: 1px solid rgba(0,0,0,0.1);
-    padding: 10px 20px;
-    outline: none;
+.diagram__name {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-input:not([type='submit']):focus {
-    border-color: cornflowerblue;
-    border-left: none;
+.diagram__cost {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.error,
-.error:focus {
-    border-color: red;
-    border-left: none;
+#tbody td:not(:first-child) {
+    color: #0c5460;
 }
 
-.agree {
-    border-color: green;
-    border-left: none;
-}
-
-.btn {
-    border: 2px solid dodgerblue;
-    border-radius: 5px;
-    font-size: 16px;
-    color: dodgerblue;
-    width: 100%;
-    outline: none;
-}
-
-.btn:hover {
+#tbody td:not(:first-child):hover {
+    color: #005cbf;
     cursor: pointer;
-    border-color: cornflowerblue;
-    color: cornflowerblue;
 }
 
-.btn:disabled {
-    opacity: 0.2;
-    cursor: not-allowed;
+.diagram__block {
+    display: block;
+    width: 100%;
+    height: 0%;
+    background-color: black;
+    transition-duration: 1s;
+}
+
+.diagram--0 .diagram__block {
+    background-color: lightseagreen;
+}
+
+.diagram--1 .diagram__block {
+    background-color: blue;
+}
+
+.diagram--2 .diagram__block {
+    background-color: #0c5460;
+}
+
+.diagram--3 .diagram__block {
+    background-color: #005cbf;
+}
+
+.diagram--4 .diagram__block {
+    background-color: #b21f2d;
+}
+
+.diagram--5 .diagram__block {
+    background-color: #e83e8c;
+}
+
+.diagram--6 .diagram__block {
+    background-color: darkgreen;
+}
+
+.diagram--7 .diagram__block {
+    background-color: gold;
 }
